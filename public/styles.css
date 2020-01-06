@@ -4,8 +4,8 @@
          }
     }  
  
- body {
-    background-image: url(images/web-design-2906159_1920.jpg);
+.container {
+ /* background-image: url(./images/web-design-2906159_1920.jpg); */
 }
 
 .topnav {

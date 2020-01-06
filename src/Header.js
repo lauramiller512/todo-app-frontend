@@ -4,7 +4,11 @@ class Header extends React.Component {
 
     render() {
       return (
-        <p>Here's another thing</p>
+        <div className="topnav">
+          <a class="active" href="index.html">HOME</a>
+          <a href="calendar.html">Calendar <img src="images/calendar.png" class="calendar" /></a>
+          <a href="savedLists.html">Saved Lists</a>
+        </div>
       );
     }
   }
