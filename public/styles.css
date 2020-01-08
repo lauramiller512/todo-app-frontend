@@ -6,12 +6,23 @@
  
 .container {
  /* background-image: url(./images/web-design-2906159_1920.jpg); */
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .topnav {
     /* background-color: gray; */
     overflow: hidden;
     opacity: 1;
+    text-align: right;
+    font-weight: bolder;
+    font-size: 26px;
+    padding: 25px 16px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+
 }
 
 .topnav a {
@@ -31,6 +42,10 @@
 
 .calendar {
     width: 1.5em;
+}
+
+.addTask {
+    position: relative;
 }
 
 .form {
@@ -55,6 +70,11 @@
     width: 80%;
     display: inline-block;
     text-align: center;
+    background-color: aliceblue;
+}
+
+.submit {
+    background-color: aliceblue;
 }
 
 .edit {
