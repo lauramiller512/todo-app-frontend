@@ -6,9 +6,9 @@ class AddTask extends React.Component {
 
     render() {
       return (
-        <div className="addTask">
-            <input type="text" id="myInput" placeholder="Add task..."></input>
-            <SubmitButton />
+        <div className="col-12 addTask">
+                <input type="text" id="myInput" placeholder="Add task..."></input>
+                <SubmitButton />
         </div>
       );
     }

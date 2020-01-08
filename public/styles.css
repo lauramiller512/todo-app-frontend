@@ -46,6 +46,7 @@
 
 .addTask {
     position: relative;
+    display: inline;
 }
 
 .form {

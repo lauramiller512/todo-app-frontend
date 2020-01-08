@@ -10,19 +10,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <Container />
-          <div className="row">
-            <div col-12>
-              <Header />
-          <div className="row">
-            <div col-6></div>
-            <div col-6>
-              <AddTask />
-            </div>
-          </div>
-          </div>
-        </div>
+      <div>
+          <Container />
+          <Header />
+          <AddTask />
       </div>
     );
   }
