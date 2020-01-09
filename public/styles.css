@@ -14,7 +14,6 @@
 }
 
 .topnav {
-    /* background-color: gray; */
     overflow: hidden;
     opacity: 1;
     text-align: right;
@@ -22,7 +21,6 @@
     font-size: 26px;
     padding: 25px 16px;
     position: fixed;
-    top: 10px;
     right: 10px;
 
 }
