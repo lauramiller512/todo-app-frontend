@@ -7,8 +7,8 @@
 .container {
  /* background-image: url(./images/web-design-2906159_1920.jpg); */
     position: absolute;
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 .topnav {
@@ -76,6 +76,12 @@
 
 .submit {
     background-color: aliceblue;
+}
+
+.plus {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 2%;
+    height: 2%;
 }
 
 .edit {
