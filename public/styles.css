@@ -47,6 +47,7 @@
 .addTask {
     position: relative;
     display: inline;
+    text-align: center;
 }
 
 .form {
@@ -71,10 +72,6 @@
     width: 80%;
     display: inline-block;
     text-align: center;
-    background-color: aliceblue;
-}
-
-.submit {
     background-color: aliceblue;
 }
 

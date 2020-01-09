@@ -8,12 +8,7 @@ class AddTask extends React.Component {
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col-12">
-
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-12 addTask">
+                <div class="input-append" className="col-md-6 offset-md-3 addTask">
                         <input type="text" id="myInput" placeholder="Add task..."></input>
                         <SubmitButton />
                         <EditButton />
