@@ -1,12 +1,15 @@
 import React from 'react';
+import logo from './images/checked.png';
+
 
 class DoneButton extends React.Component {
 
     render() {
         return (
-            <div className="done">
-                    {/*} <span onclick="newElement()" class="addBtn">Done</span> */}
-                    <button type="button">Click Me!</button> 
+            <div className="container">
+                <div className="row">
+                    <span onclick="newElement()" class="addBtn"><img src={logo} className="done"></img></span>
+                </div>
             </div>
         );
     }
