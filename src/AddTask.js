@@ -8,14 +8,18 @@ class AddTask extends React.Component {
         return (
             <div className="container">
                 <div className="row">
-                    <div class="input-append" className="col-md-6 offset-md-3 addTask">
+                    <div class="input-group-append" className="col-md-6 addTask">
                         <input type="text" id="myInput" placeholder="Add task..."></input>
-                        <SubmitButton />
-                        <EditButton />
+                        <div className="col-3">
+                            <SubmitButton />
+                        </div>
+                        <div className="col-3">
+                            <EditButton />
+                        </div>
                     </div>
                 </div>
             </div>
-      );
+        );
     }
 }
 

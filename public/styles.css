@@ -11,6 +11,7 @@
     height: auto;
     top: 0;
     left: 0;
+    align-items: center;
 }
 
 .topnav {
@@ -41,11 +42,18 @@
 }
 
 .addTask {
-    position: relative;
+    position: fixed;
     display: inline;
     text-align: center;
-    align-items: center;
     padding-top: 16em;
+}
+
+.taskList {
+    position: fixed;
+    padding-top: 20em;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: white;
 }
 
 .done {

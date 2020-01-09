@@ -5,7 +5,7 @@ class SubmitButton extends React.Component {
 
     render() {
       return (
-          <div className="submit">
+          <div className="col-2">
             <span onclick="newElement()" class="addBtn"><img src={logo} className="plus"></img></span>
           </div>
       );
