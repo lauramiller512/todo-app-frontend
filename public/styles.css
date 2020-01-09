@@ -48,25 +48,6 @@
     padding-top: 16em;
 }
 
-/*
-.form {
-    background-color: rgb(204, 214, 233, 0.7);
-    font-size: 25;
-    font-weight: bold;
-    float: right; /* look into clearfix hack 
-    border-radius: 10px;
-    margin-top: 3em;
-    width: 100%;
-    /* padding-top: 8px;
-    padding-bottom: 8px; 
-    padding: 8px 0 8px 5px;  
-    text-align: center;
-} */
-/*
-.myText {
-    width: 40%;
-} */
-
 .done {
     width: 80%;
     display: inline-block;
@@ -87,20 +68,13 @@
 
 .footer {
     position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
     background-color: aliceblue;
     opacity: 0.5;
-    color: black;
     text-align: center;
 }
 
 .h2 {
     color: black;
-}
-
-.footer-copyright {
-    color: black;
-    text-align: center;
 }
