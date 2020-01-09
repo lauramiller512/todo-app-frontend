@@ -8,9 +8,9 @@ class TaskList extends React.Component {
         return (
             <div className="container">
                 <div className="row">
-                    <div class="form-horizontal" className="col-md-6 offset-md-3 addTask">
+                    <div class="form-horizontal" className="col-md-6 offset-md-3 taskList">
                         <input type="text" id="myInput" placeholder="Add task..."></input>
-                        <EditButton />
+                        <EditButton /> 
                         <DoneButton />
                     </div>
                 </div>

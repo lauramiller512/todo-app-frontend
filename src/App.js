@@ -6,6 +6,7 @@ import Header from './Header';
 import Container from './Container';
 import AddTask from './AddTask';
 import TaskList from './TaskList';
+import Footer from './Footer';
 
 class App extends React.Component {
 
@@ -16,6 +17,7 @@ class App extends React.Component {
           <Header />
           <AddTask />
       {/*}    <TaskList /> */}
+          <Footer />
       </div>
     );
   }
