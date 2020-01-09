@@ -1,5 +1,6 @@
 import React from 'react';
 import SubmitButton from './SubmitButton';
+import EditButton from './EditButton';
 
 class AddTask extends React.Component {
 
@@ -15,6 +16,7 @@ class AddTask extends React.Component {
                     <div className="col-12 addTask">
                         <input type="text" id="myInput" placeholder="Add task..."></input>
                         <SubmitButton />
+                        <EditButton />
                     </div>
                 </div>
             </div>

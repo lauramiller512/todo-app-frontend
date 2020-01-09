@@ -1,24 +1,17 @@
 import React from 'react';
-
+import logo from './images/edit.png';
 
 class EditButton extends React.Component {
 
     render() {
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-12">
-
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-12 addTask">
-                        <input type="text" id="myInput" placeholder="Add task..."></input>
-                        <EditButton />
-                        <DoneButton />
-                    </div>
-                </div>
-            </div>
+           <div className="container">
+               <div className="row">
+                   <div className="edit">
+                   <span onclick="newElement()" class="addBtn"><img src={logo} className="edit"></img></span>
+                   </div>
+               </div>
+           </div>
       );
     }
 }
