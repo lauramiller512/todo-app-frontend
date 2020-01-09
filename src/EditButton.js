@@ -7,8 +7,8 @@ class EditButton extends React.Component {
         return (
            <div className="container">
                <div className="row">
-                   <div className="edit">
-                   <span onclick="newElement()" class="addBtn"><img src={logo} className="edit"></img></span>
+                   <div className="col-md-6 offset-md-3">
+                        <span onclick="newElement()" class="addBtn" className="edit"><img src={logo}></img></span>
                    </div>
                </div>
            </div>
