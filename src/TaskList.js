@@ -1,7 +1,8 @@
 import React from 'react';
-import SubmitButton from './SubmitButton';
+import DoneButton from './DoneButton';
+import EditButton from './EditButton';
 
-class AddTask extends React.Component {
+class TaskList extends React.Component {
 
     render() {
         return (
@@ -14,7 +15,8 @@ class AddTask extends React.Component {
                 <div className="row">
                     <div className="col-12 addTask">
                         <input type="text" id="myInput" placeholder="Add task..."></input>
-                        <SubmitButton />
+                        <EditButton />
+                        <DoneButton />
                     </div>
                 </div>
             </div>
@@ -22,4 +24,4 @@ class AddTask extends React.Component {
     }
 }
 
-export default AddTask;
+export default TaskList;
