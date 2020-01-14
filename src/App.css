@@ -11,6 +11,8 @@
 .header {
   text-align: center;
   margin-top: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .taskCountArea {
@@ -22,6 +24,10 @@
 
 .taskRow {
   border-bottom: 2px solid darkgray;
+  padding: 20px 0 20px 0;
+}
+
+.tasksCompleted {
   padding: 20px 0 20px 0;
 }
 

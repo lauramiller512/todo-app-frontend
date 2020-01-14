@@ -4,13 +4,9 @@ class CompletedTasks extends React.Component {
 
   render() {
     return (
-        <div>
-        {
-            this.props.completeTask.map(
-                (taskItem) => <Task item={taskItem} />
-            )
-        }
-    </div>
+        <div className="tasksCompleted">
+            <h3>Tasks Completed: {this.props.completeTask}</h3>
+        </div>
     );
   }
 }
