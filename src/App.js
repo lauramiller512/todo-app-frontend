@@ -2,21 +2,17 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Header from './Header';
-import Container from './Container';
-import AddTask from './AddTask';
-import TaskList from './TaskList';
-import Footer from './Footer';
+import Header from './components/Header';
+import Body from './components/Body';
+import Footer from './components/Footer';
 
 class App extends React.Component {
 
   render() {
     return (
-      <div>
-          <Container />
+      <div className="container">
           <Header />
-          <AddTask />
-          <TaskList />
+          <Body />
           <Footer />
       </div>
     );

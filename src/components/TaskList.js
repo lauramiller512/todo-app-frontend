@@ -8,7 +8,7 @@ class TaskList extends React.Component {
         return (
             <div className="container">
                 <div className="row">
-                    <div class="input-group-append" className="col-md-6 offset-md-6 taskList">
+                    <div class="input-group-append" className="col-6 taskList">
                         <ul> {/*Put list title here */}
                             <li>Buy Milk</li>
                             <li>Walk the dog</li>
