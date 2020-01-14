@@ -4,7 +4,7 @@
        }
   }  
 
-.topnav {
+/*.topnav {
   overflow: hidden;
   opacity: 1;
   text-align: right;
@@ -13,13 +13,12 @@
   padding: 25px 16px;
   position: fixed;
   right: 10px;
-
-}
+} 
 
 .topnav a:hover {
   background-color: rgb(68, 127, 134);
   color: white;
-}
+} */
 
 .addTask {
   position: fixed;
