@@ -1,15 +1,16 @@
 import React from 'react';
-import logo from './images/home.png';
 
 class Header extends React.Component {
 
-    render() {
-      return (
-        <div className="topnav">
-          <a class="active" href="index.html"><img src={logo}></img></a>
+  render() {
+    return (
+      <div className="row d-none d-md-block">
+        <div className="col-12 header">
+          <h1>Stuff that needs doing...</h1>
         </div>
-      );
-    }
+      </div>
+    );
   }
-  
-  export default Header;
+}
+
+export default Header;

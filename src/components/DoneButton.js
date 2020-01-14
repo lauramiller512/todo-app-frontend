@@ -1,6 +1,4 @@
 import React from 'react';
-import logo from './images/checked.png';
-
 
 class DoneButton extends React.Component {
 
@@ -8,7 +6,7 @@ class DoneButton extends React.Component {
         return (
             <div className="container">
                 <div className="row">
-                    <span onclick="newElement()" class="addBtn"><img src={logo} className="done"></img></span>
+                    <span onclick="newElement()" class="addBtn"></span>
                 </div>
             </div>
         );

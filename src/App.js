@@ -7,6 +7,14 @@ import Footer from './components/Footer';
 
 class App extends React.Component {
 
+  state = {
+    tasks: [
+      { id: 1, description: "Walk the dog", completed: false },
+      { id: 2, description: "Eat cheese", completed: false },
+      { id: 3, description: "Learn the kazoo", completed: false }
+    ]
+  }
+
   render() {
     return (
       <div className="container">

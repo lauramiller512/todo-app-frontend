@@ -20,6 +20,13 @@
   color: white;
 } */
 
+
+.header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
 .addTask {
   position: fixed;
   display: inline;
