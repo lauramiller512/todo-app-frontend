@@ -5,12 +5,18 @@ class AddTask extends React.Component {
 
     render() {
         return (
-            <div className="container">
-                <div className="row">
-                    <div class="input-group-append" className="col-6 addTask">
-                        <input type="text" id="myInput" placeholder="Task to add..."></input>
-                        <div className="col-3">
-                            <SubmitButton />
+            <div className="row">
+                <div className="col-12">
+                    <div className="input-group mb-3">
+                        <input
+                            type="text"
+                            className="form-control"
+                            placeholder="Task to add...."
+                        />
+                        <div className="input-group-append">
+                            <button className="btn btn-outline-primary" type="button">
+                                Add
+              </button>
                         </div>
                     </div>
                 </div>
