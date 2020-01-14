@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header';
 import AddTask from './components/AddTask';
-import TaskCount from '.components/TaskCount';
-import TaskList from '.components/TaskList';
+import TaskCount from './components/TaskCount';
+import TaskList from './components/TaskList';
 import Footer from './components/Footer';
 
 class App extends React.Component {
@@ -36,8 +36,8 @@ class App extends React.Component {
       <div className="container">
           <Header />
           <AddTask />
-          <TaskCount />
-          <TaskList />
+          <TaskCount TaskCount={this.state.tasks.length}/>
+          <TaskList taskCollection={this.state.tasks} deleteTaskFunc={this.deleteTask}/>
           <Footer />
       </div>
     );

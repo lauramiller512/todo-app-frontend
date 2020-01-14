@@ -26,14 +26,6 @@
   margin-top: 20px;
 }
 
-
-.addTask {
-  position: fixed;
-  display: inline;
-  text-align: center;
-  padding-top: 16em;
-}
-
 .taskList {
   position: fixed;
   padding-top: 20em;
