@@ -4,6 +4,7 @@ import Header from './components/Header';
 import AddTask from './components/AddTask';
 import TaskCount from './components/TaskCount';
 import TaskList from './components/TaskList';
+import CompletedTasks from './components/CompletedTasks';
 import Footer from './components/Footer';
 
 class App extends React.Component {
@@ -13,7 +14,7 @@ class App extends React.Component {
       { id: 1, description: "Walk the dog", completed: false },
       { id: 2, description: "Eat cheese", completed: false },
       { id: 3, description: "Learn the kazoo", completed: false }
-    ]
+    ],
 
     doneTasks: [
       { id: 4, description: "Read a book", completed: true},
@@ -38,6 +39,8 @@ class App extends React.Component {
     });
   }
 
+
+
   render() {
     return (
       <div className="container">
@@ -45,6 +48,7 @@ class App extends React.Component {
           <AddTask />
           <TaskCount TaskCount={this.state.tasks.length} doneTaskFunc/>
           <TaskList taskCollection={this.state.tasks} deleteTaskFunc={this.deleteTask}/>
+          <CompletedTasks completeTask={this.state.doneTasks.length} />
           <Footer />
       </div>
     );

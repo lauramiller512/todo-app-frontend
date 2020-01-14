@@ -1,5 +1,4 @@
 import React from 'react';
-import SubmitButton from './SubmitButton';
 
 class AddTask extends React.Component {
 
