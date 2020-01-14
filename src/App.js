@@ -14,7 +14,14 @@ class App extends React.Component {
       { id: 2, description: "Eat cheese", completed: false },
       { id: 3, description: "Learn the kazoo", completed: false }
     ]
+
+    doneTasks: [
+      { id: 4, description: "Read a book", completed: true},
+      { id: 5, description: "Play Mario Kart", completed: true}
+    ]
   }
+
+
 
   deleteTask = (taskId) => {
     // Tasks will be deleted when this function executes
@@ -36,7 +43,7 @@ class App extends React.Component {
       <div className="container">
           <Header />
           <AddTask />
-          <TaskCount TaskCount={this.state.tasks.length}/>
+          <TaskCount TaskCount={this.state.tasks.length} doneTaskFunc/>
           <TaskList taskCollection={this.state.tasks} deleteTaskFunc={this.deleteTask}/>
           <Footer />
       </div>

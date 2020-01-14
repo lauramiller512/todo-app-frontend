@@ -4,54 +4,25 @@
        }
   }  
 
-/*.topnav {
-  overflow: hidden;
-  opacity: 1;
-  text-align: right;
-  font-weight: bolder;
-  font-size: 26px;
-  padding: 25px 16px;
-  position: fixed;
-  right: 10px;
-} 
-
-.topnav a:hover {
-  background-color: rgb(68, 127, 134);
-  color: white;
-} */
-
+.container {
+  background-color: bisque;
+}
 
 .header {
   text-align: center;
   margin-top: 20px;
 }
 
-.taskList {
-  position: fixed;
-  padding-top: 20em;
-  font-size: 1.5em;
-  font-weight: bolder;
-  color: white;
-  align-items: center;
+.taskCountArea {
+  border-top: 2px dashed grey;
+  border-bottom: 2px dashed grey;
+  padding: 20px 0 20px 0;
   text-align: center;
 }
 
-.done {
-  width: 80%;
-  display: inline-block;
-  text-align: center;
-  background-color: aliceblue;
-}
-
-.plus {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 3%;
-  height: 3%;
-}
-
-.edit {
-  width: 5%;
-  height: 5%;
+.taskRow {
+  border-bottom: 2px solid darkgray;
+  padding: 20px 0 20px 0;
 }
 
 .footer {
