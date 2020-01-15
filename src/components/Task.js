@@ -8,7 +8,7 @@ class Task extends React.Component {
     }
 
     doneClicked = () => {
-        this.props.doneTaskFunc(this.props.item.id);
+        // write function here
     }
 
 

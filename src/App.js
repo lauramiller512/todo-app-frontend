@@ -43,13 +43,17 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container">
-          <Header />
-          <AddTask />
-          <TaskCount TaskCount={this.state.tasks.length} doneTaskFunc/>
-          <TaskList taskCollection={this.state.tasks} deleteTaskFunc={this.deleteTask}/>
-          <CompletedTasks completeTask={this.state.doneTasks.length} />
-          <Footer />
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-12 body">
+            <Header />
+            <AddTask />
+            <TaskCount TaskCount={this.state.tasks.length} />
+            <TaskList taskCollection={this.state.tasks} deleteTaskFunc={this.deleteTask}/>
+            <CompletedTasks completeTask={this.state.doneTasks.length} />
+            <Footer />
+          </div>
+        </div>
       </div>
     );
   }
