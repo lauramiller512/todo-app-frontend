@@ -15,6 +15,10 @@
   padding: 20px 0 50px 0;
 }
 
+.addtask {
+  padding-bottom: 2em;
+}
+
 .taskCountArea {
   padding: 20px 0 20px 0;
   text-align: center;
@@ -37,6 +41,7 @@
   background-color: aliceblue;
   opacity: 0.5;
   text-align: center;
+  padding-top: 10px;
 }
 
 .h2 {

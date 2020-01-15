@@ -4,9 +4,9 @@ class AddTask extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container addtask">
                 <div className="row">
-                    <div className="col-5 offset-4 addtask">
+                    <div className="col-5 offset-4">
                         <h3>Add your task to the list here: </h3>
                     </div>
                 </div>
