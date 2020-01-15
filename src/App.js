@@ -43,9 +43,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container-fluid flex-fill">
         <div className="row">
-          <div className="col-12 body">
+          <div className="col-12">
             <Header />
             <AddTask />
             <TaskCount TaskCount={this.state.tasks.length} />
