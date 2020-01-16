@@ -20,12 +20,12 @@
 }
 
 .addtask {
-  padding-bottom: 1em;
   font-family: 'Amatic SC', cursive;
+  padding-top: 10px;
 }
 
 .taskCountArea {
-  padding: 5em 0 0 0;
+  padding: 3em 0 0 0;
   text-align: center;
   font-family: 'Atlata', cursive;
 }
@@ -33,7 +33,7 @@
 .taskRow {
   padding: 1em 0 0 0;
   font-family: 'Amatic SC', sans-serif;
-  font-size: 30px;
+  font-size: 35px;
   display: flex;
 }
 
