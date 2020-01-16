@@ -5,7 +5,7 @@ class TaskCount extends React.Component {
     return (
       <div className="row taskCountArea">
         <div className="col-12">
-            <h3>Tasks left: {this.props.taskCount}</h3>
+            <h1>Tasks left: {this.props.taskCount}</h1>
         </div>
       </div>
     );

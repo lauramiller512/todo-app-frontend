@@ -7,7 +7,7 @@ class AddTask extends React.Component {
             <div className="container addtask">
                 <div className="row">
                     <div className="col-5 offset-4">
-                        <h3>Add your task to the list here: </h3>
+                        <h1>Add your task to the list here: </h1>
                     </div>
                 </div>
                 <div className="row">
