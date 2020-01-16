@@ -21,7 +21,7 @@ class Task extends React.Component {
                 </div>
                 <div className="col-6 col-md-2">
                     <button type="button" class="btn btn-success">
-                        Done
+                        Finished!
           </button>
                 </div>
                 <div className="col-6 col-md-2">

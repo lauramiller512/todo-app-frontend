@@ -6,17 +6,21 @@
 
 .flex-fill {
   background-color: #a4f0b5;
+  background-image: url(./images/blueback.jpg);
   min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header {
   text-align: center;
   margin-top: 20px;
   padding: 20px 0 50px 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .addtask {
-  padding-bottom: 2em;
+  padding-bottom: 1em;
 }
 
 .taskCountArea {
@@ -25,6 +29,7 @@
 }
 
 .taskRow {
+  border-top: 2px solid darkgray;
   border-bottom: 2px solid darkgray;
   padding: 2em 0 20px 0;
 }
