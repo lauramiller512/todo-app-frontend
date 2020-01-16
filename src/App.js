@@ -39,6 +39,11 @@ class App extends React.Component {
     });
   }
 
+  completeTasks = (taskId) => {
+    const doneList = this.state.doneTasks;
+
+  }
+
 
 
   render() {
