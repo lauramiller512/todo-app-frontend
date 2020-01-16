@@ -31,13 +31,26 @@
 }
 
 .taskRow {
-  border-top: 2px solid darkgray;
-  border-bottom: 2px solid darkgray;
-  padding: 2em 0 20px 0;
+  padding: 2em 0 0 0;
+  font-family: 'Alata', sans-serif;
+  font-size: larger;
+  display: flex;
+}
+
+.completedTitle {
+  font-family: 'Amatic SC', cursive;
+  padding-top: 2em;
+  text-align: center;
 }
 
 .tasksCompleted {
-  padding: 4em 0 2em 0;
+  font-family: 'Alata', sans-serif;
+  font-size: larger;
+  text-align: left;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .footer {
