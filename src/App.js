@@ -12,14 +12,14 @@ class App extends React.Component {
 
   state = {
     tasks: [
-      { id: 1, description: "Walk the dog", completed: false },
-      { id: 2, description: "Eat cheese", completed: false },
-      { id: 3, description: "Learn the kazoo", completed: false }
+      { id: uuidv4(), description: "Walk the dog", completed: false },
+      { id: uuidv4(), description: "Eat cheese", completed: false },
+      { id: uuidv4(), description: "Learn the kazoo", completed: false }
     ],
 
     doneTasks: [
-      { id: 4, description: "Read a book", completed: true},
-      { id: 5, description: "Play Mario Kart", completed: true}
+      { id: uuidv4(), description: "Read a book", completed: true},
+      { id: uuidv4(), description: "Play Mario Kart", completed: true}
     ]
   }
 
@@ -46,7 +46,7 @@ class App extends React.Component {
   }
 
   addTask = (taskDescription) => {
-    const taskToAdd = { id: 7, description: taskDescription, compled: false};
+    const taskToAdd = { id: uuidv4(), description: taskDescription, compled: false};
 
     const currentTasks = this.state.tasks;
 
