@@ -4,11 +4,11 @@ class CompletedTasks extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container-fluid flex-fill">
         <div className="row">
-          <div className="col-12 col-md-8">
+          <div className="col-6 offset-3">
             <h3 className="completedTitle">Tasks Completed: </h3>
-            <div className="col-12 col-md-8">
+            <div className="col-12">
               <ul className="tasksCompleted">
                 <li>Watch a film</li>
                 <li>Call the bank</li>
@@ -17,7 +17,7 @@ class CompletedTasks extends React.Component {
               </div>
             </div>
           </div>
-    </div> 
+          </div>
     );
   }
 }

@@ -6,6 +6,7 @@ import TaskCount from './components/TaskCount';
 import TaskList from './components/TaskList';
 import CompletedTasks from './components/CompletedTasks';
 import Footer from './components/Footer';
+import uuidv4 from 'uuid/v4';
 
 class App extends React.Component {
 
@@ -44,6 +45,17 @@ class App extends React.Component {
 
   }
 
+  addTask = (taskDescription) => {
+    const taskToAdd = { id: 7, description: taskDescription, compled: false};
+
+    const currentTasks = this.state.tasks;
+
+    currentTasks.push(taskToAdd);
+
+    this.setState({
+      tasks: currentTasks
+    });
+  }
 
 
   render() {
