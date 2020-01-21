@@ -46,12 +46,19 @@ class App extends React.Component {
   }
 
   addTask = (taskDescription) => {
+
+    //Defining the task that we're adding
     const taskToAdd = { id: uuidv4(), description: taskDescription, compled: false};
 
+    console.log("Adding a task");
+    console.log("taskToAdd");
+
+    // Pulling the current array list of tasks from state
     const currentTasks = this.state.tasks;
 
+    // Pushing the added task into the array
     currentTasks.push(taskToAdd);
-
+    // Updates the state (up above)
     this.setState({
       tasks: currentTasks
     });
@@ -65,7 +72,7 @@ class App extends React.Component {
           <div className="col-12">
             <Header />
             <AddTask addTaskFunc={this.addTask}/>
-            <TaskCount TaskCount={this.state.tasks.length} />
+            <TaskCount taskCount={this.state.tasks.length} />
             <TaskList taskCollection={this.state.tasks} deleteTaskFunc={this.deleteTask}/>
             <CompletedTasks completeTask={this.state.doneTasks.length} />
             <Footer />
