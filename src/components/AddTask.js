@@ -2,6 +2,16 @@ import React from 'react';
 
 class AddTask extends React.Component {
 
+    AddTask = () => {
+        this.props.addTaskFunc("Feed dog")
+    }
+
+    taskDescriptionChanged = (event) => {
+        this.setState({
+            taskDescription: event.target.value
+        });
+    }
+
     render() {
         return (
             <div className="container addtask">
@@ -17,6 +27,7 @@ class AddTask extends React.Component {
                                 type="text"
                                 className="form-control"
                                 placeholder="Task to add...."
+                                onChange={this.taskDescription}
                             />
                             <div className="input-group-append">
                                 <button className="btn btn-outline-primary" type="button">

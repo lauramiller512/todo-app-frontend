@@ -64,7 +64,7 @@ class App extends React.Component {
         <div className="row">
           <div className="col-12">
             <Header />
-            <AddTask />
+            <AddTask addTaskFunc={this.addTask}/>
             <TaskCount TaskCount={this.state.tasks.length} />
             <TaskList taskCollection={this.state.tasks} deleteTaskFunc={this.deleteTask}/>
             <CompletedTasks completeTask={this.state.doneTasks.length} />
