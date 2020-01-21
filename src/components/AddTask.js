@@ -30,7 +30,7 @@ class AddTask extends React.Component {
                                 onChange={this.taskDescription}
                             />
                             <div className="input-group-append">
-                                <button className="btn btn-outline-primary" type="button">
+                                <button className="btn addButton btn-outline-primary" type="button">
                                     Add
               </button>
                             </div>
