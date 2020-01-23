@@ -4,7 +4,7 @@ import Header from './components/Header';
 import AddTask from './components/AddTask';
 import TaskCount from './components/TaskCount';
 import TaskList from './components/TaskList';
-import CompletedTasks from './components/CompletedTasks';
+import DoneTask from './components/DoneTask';
 import Footer from './components/Footer';
 import uuidv4 from 'uuid/v4';
 
@@ -88,7 +88,7 @@ class App extends React.Component {
             <AddTask addTaskFunc={this.addTask} />
             <TaskCount taskCount={this.state.tasks.length} />
             <TaskList taskCollection={this.state.tasks} deleteTaskFunc={this.deleteTask} completedTaskFunc={this.completeTask}/>
-            <CompletedTasks completeTask={this.state.doneTasks.length} />
+            <DoneTask completeTask={this.state.doneTasks.length} />
             <Footer />
           </div>
         </div>

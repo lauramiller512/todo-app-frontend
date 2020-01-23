@@ -1,6 +1,6 @@
 import React from 'react';
 
-class CompletedTasks extends React.Component {
+class DoneTasks extends React.Component {
 
   render() {
     return (
@@ -22,4 +22,4 @@ class CompletedTasks extends React.Component {
   }
 }
 
-export default CompletedTasks;
+export default DoneTasks;

@@ -6,8 +6,8 @@ class AddTask extends React.Component {
         taskDescription: "Enter your task..."
     }
 
-    AddTask = () => {
-        this.props.addTaskFunc("Feed dog")
+    addTask = () => {
+        this.props.addTaskFunc(this.state.taskDescription);
     }
 
     taskDescriptionChanged = (event) => {
@@ -31,10 +31,10 @@ class AddTask extends React.Component {
                                 type="text"
                                 className="form-control"
                                 placeholder="Task to add...."
-                                onChange={this.taskDescription}
+                                onChange={this.taskDescriptionChanged}
                             />
                             <div className="input-group-append">
-                                <button className="btn addButton btn-outline-primary" type="button">
+                                <button className="btn addButton btn-outline-primary" type="button" onClick={this.addTask}>
                                     Add
               </button>
                             </div>
