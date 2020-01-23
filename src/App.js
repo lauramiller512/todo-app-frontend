@@ -62,10 +62,10 @@ class App extends React.Component {
   addTask = (taskDescription) => {
 
     //Defining the task that we're adding
-    const taskToAdd = { id: uuidv4(), description: taskDescription, compled: false};
+    const taskToAdd = { id: uuidv4(), description: taskDescription, completed: false};
 
     console.log("Adding a task");
-    console.log("taskToAdd");
+    console.log(taskToAdd);
 
     // Pulling the current array list of tasks from state
     const currentTasks = this.state.tasks;

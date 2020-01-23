@@ -5,11 +5,11 @@ class Task extends React.Component {
     deleteClicked = () => {
         this.props.deleteTaskFunc(this.props.item.id);
         {/* alert('You clicked the delete button'); */ }
-    }
+    };
 
     doneClicked = () => {
-        // write function here
-    }
+        this.props.completedTaskFunc(this.props.item.id);
+    };
 
 
 
