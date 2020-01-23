@@ -40,9 +40,23 @@ class App extends React.Component {
     });
   }
 
-  completeTasks = (taskId) => {
-    const doneList = this.state.doneTasks;
+  completeTask = (taskId) => {
+    // Firstly find the task that needs to be updated
+    const tasksBeingUpdated = this.state.tasks; // Array of tasks
+    for( let i = 0; i < tasksBeingUpdated.length; i++ ) {
+      const task = tasksBeingUpdated[i];
 
+      if(task.id === taskId ) {
+        // We need to update a property on the identified task
+        task.completed = true;
+        break;
+      }
+    }
+
+    // Update state to reflect the changes made to the task
+    this.setState({
+      tasks: tasksBeingUpdated
+    });
   }
 
   addTask = (taskDescription) => {
@@ -71,9 +85,9 @@ class App extends React.Component {
         <div className="row">
           <div className="col-12">
             <Header />
-            <AddTask addTaskFunc={this.addTask}/>
+            <AddTask addTaskFunc={this.addTask} />
             <TaskCount taskCount={this.state.tasks.length} />
-            <TaskList taskCollection={this.state.tasks} deleteTaskFunc={this.deleteTask}/>
+            <TaskList taskCollection={this.state.tasks} deleteTaskFunc={this.deleteTask} completedTaskFunc={this.completeTask}/>
             <CompletedTasks completeTask={this.state.doneTasks.length} />
             <Footer />
           </div>

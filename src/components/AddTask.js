@@ -2,6 +2,10 @@ import React from 'react';
 
 class AddTask extends React.Component {
 
+    state = {
+        taskDescription: "Enter your task..."
+    }
+
     AddTask = () => {
         this.props.addTaskFunc("Feed dog")
     }

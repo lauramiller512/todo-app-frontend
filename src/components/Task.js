@@ -14,16 +14,31 @@ class Task extends React.Component {
 
 
     render() {
-        return (
-            <div className="row taskRow">
-                <div className="col-12 col-md-8">
+        let description;
+
+        if (this.props.item.completed) {
+            description = (
+                <div className="col-12 col-md-8 completedTask">
                     {this.props.item.description}
                 </div>
+            );
+        } else {
+            description = (
+                <div className="col-12 col-md-8">{this.props.item.description}</div>
+            );
+        }
+
+        return (
+            <div className="row taskRow">
+                {description}
                 <div className="col-6 col-md-2">
-                    <button type="button" className="btn btn-success">
-                        Finished!
-          </button>
+                    {!this.props.item.description && (
+                       <button type="button" className="btn btn-success" onClick={this.doneClicked}>
+                           Finished!
+                       </button>
+                    )}
                 </div>
+                
                 <div className="col-6 col-md-2">
                     <button type="button" className="btn btn-danger" onClick={this.deleteClicked}>
                         Delete

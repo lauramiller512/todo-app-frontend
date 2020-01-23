@@ -4,7 +4,7 @@ class CompletedTasks extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid flex-fill">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-6 offset-3">
             <h3 className="completedTitle">Tasks Completed: </h3>
