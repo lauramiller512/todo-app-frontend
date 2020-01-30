@@ -18,8 +18,8 @@ class App extends React.Component {
     ],
 
     doneTasks: [
-      { id: uuidv4(), description: "Read a book", completed: true},
-      { id: uuidv4(), description: "Play Mario Kart", completed: true}
+      { id: uuidv4(), description: "Read a book", completed: true },
+      { id: uuidv4(), description: "Play Mario Kart", completed: true }
     ]
   }
 
@@ -41,12 +41,13 @@ class App extends React.Component {
   }
 
   completeTask = (taskId) => {
+   
     // Firstly find the task that needs to be updated
     const tasksBeingUpdated = this.state.tasks; // Array of tasks
-    for( let i = 0; i < tasksBeingUpdated.length; i++ ) {
+    for (let i = 0; i < tasksBeingUpdated.length; i++) {
       const task = tasksBeingUpdated[i];
 
-      if(task.id === taskId ) {
+      if (task.id === taskId) {
         // We need to update a property on the identified task
         task.completed = true;
         break;
@@ -59,42 +60,46 @@ class App extends React.Component {
     });
   }
 
-  addTask = (taskDescription) => {
+    addTask = (taskDescription) => {
 
-    //Defining the task that we're adding
-    const taskToAdd = { id: uuidv4(), description: taskDescription, completed: false};
+      //Defining the task that we're adding
+      const taskToAdd = { id: uuidv4(), description: taskDescription, completed: false };
 
-    console.log("Adding a task");
-    console.log(taskToAdd);
+      console.log("Adding a task");
+      console.log(taskToAdd);
 
-    // Pulling the current array list of tasks from state
-    const currentTasks = this.state.tasks;
+      // Pulling the current array list of tasks from state
+      const currentTasks = this.state.tasks;
 
-    // Pushing the added task into the array
-    currentTasks.push(taskToAdd);
-    // Updates the state (up above)
-    this.setState({
-      tasks: currentTasks
-    });
-  }
+      // Pushing the added task into the array
+      currentTasks.push(taskToAdd);
+      // Updates the state (up above)
+      this.setState({
+        tasks: currentTasks
+      });
+    }
 
 
-  render() {
-    return (
-      <div className="container-fluid flex-fill">
-        <div className="row">
-          <div className="col-12">
-            <Header />
-            <AddTask addTaskFunc={this.addTask} />
-            <TaskCount taskCount={this.state.tasks.length} />
-            <TaskList taskCollection={this.state.tasks} deleteTaskFunc={this.deleteTask} completedTaskFunc={this.completeTask}/>
-            <DoneTask completeTask={this.state.doneTasks.length} />
-            <Footer />
+    render() {
+      return (
+        <div className="container-fluid flex-fill">
+          <div className="row">
+            <div className="col-12">
+              <Header />
+              <AddTask addTaskFunc={this.addTask} />
+              <TaskCount taskCount={this.state.tasks.length} />
+              <TaskList
+                taskCollection={this.state.tasks}
+                deleteTaskFunc={this.deleteTask}
+                completedTaskFunc={this.completeTask}
+              />
+              <DoneTask />
+              <Footer />
+            </div>
           </div>
         </div>
-      </div>
-    );
+      );
+    }
   }
-}
 
-export default App;
+  export default App;

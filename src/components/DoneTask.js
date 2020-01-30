@@ -10,6 +10,13 @@ class DoneTasks extends React.Component {
             <h3 className="completedTitle">Tasks Completed: </h3>
             <div className="col-12">
               <ul className="tasksCompleted">
+                {/* Add keys to each list item, set up like:
+                const people = ['Rowe', 'Prevost', 'Gare'];
+
+const peopleLis = people.map((person, i) =>
+  // expression goes here:
+  <li key={'person_' + i}>{person}</li>;
+); */}
                 <li>Watch a film</li>
                 <li>Call the bank</li>
                 <li>Renew driver's license</li>
