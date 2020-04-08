@@ -6,7 +6,6 @@ import TaskCount from './components/TaskCount';
 import TaskList from './components/TaskList';
 import DoneTask from './components/DoneTask';
 import Footer from './components/Footer';
-import uuidv4 from 'uuid/v4';
 import axios from 'axios';
 
 class App extends React.Component {
@@ -21,8 +20,11 @@ class App extends React.Component {
     axios.get('https://7whki9pqp2.execute-api.eu-west-2.amazonaws.com/dev/tasks')
       .then((response) => {
         // handle success
-        console.log(response);
+        this.setState({
+          tasks: response.data.tasks
+        })
       })
+     
       .catch(function (error) {
         // handle failure
         console.error(error);
@@ -70,20 +72,18 @@ class App extends React.Component {
     });
   };
 
-  addTask = (taskDescription) => {
+  addTask = taskDescription => {
     const taskToAdd = {
-    description: taskDescription,
-    completed: 0,
+    taskDescription: taskDescription,
     userId: '1'
     }
 
-  axios
-    .post(
-      "https://x1v2wqvgf0.execute-api.eu-west-2.amazonaws.com/dev/tasks",
+  axios.post(
+      "https://7whki9pqp2.execute-api.eu-west-2.amazonaws.com/dev/tasks",
       taskToAdd
     )
     .then(response => {
-      taskToAdd.taskId = response.data.task.taskId;
+      taskToAdd.taskId = response.data.task.id;
 
       // Get the current list of tasks from state
       const currentTasks = this.state.tasks;
