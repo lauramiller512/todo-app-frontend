@@ -31,12 +31,12 @@ class App extends React.Component {
       })
   };
 
-  deleteTask = id => {
+  deleteTask = (id) => {
     // Tasks will be deleted when this function executes
 
     axios
       .delete(
-        `https://7whki9pqp2.execute-api.eu-west-2.amazonaws.com/dev/tasks/{taskId}`
+        `https://7whki9pqp2.execute-api.eu-west-2.amazonaws.com/dev/tasks/${id}`
       )
       .then(response => {
         // Next, identify the task that matches the given task Id and remove it
