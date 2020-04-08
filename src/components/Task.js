@@ -15,15 +15,15 @@ class Task extends React.Component {
     render() {
         let description;
 
-        if (this.props.item.completed) {
+        if (this.props.item.status) {
             description = (
                 <div className="col-12 col-md-8 completedTask">
-                    {this.props.item.description}
+                    {this.props.item.taskDescription}
                 </div>
             );
         } else {
             description = (
-                <div className="col-12 col-md-8">{this.props.item.description}</div>
+                <div className="col-12 col-md-8">{this.props.item.taskDescription}</div>
             );
         }
 
