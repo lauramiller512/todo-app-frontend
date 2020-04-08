@@ -1,13 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+This is a To-Do App designed to allow the user to add and delete tasks from their list. Tasks are given a priority level, so the user can easily see which tasks need completing first.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+![Datbase Schema](https://dbdiagram.io/d/5e6cf56d4495b02c3b883d85)
