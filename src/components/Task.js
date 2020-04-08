@@ -31,11 +31,9 @@ class Task extends React.Component {
             <div className="row taskRow">
                 {description}
                 <div className="col-6 col-md-2">
-                    {!this.props.item.completed && (
                         <button type="button" className="btn btn-success" onClick={this.doneClicked}>
                             Finished!
                        </button>
-                    )}
                 </div>
                 <div className="col-6 col-md-2">
                     <button type="button" className="btn btn-danger" onClick={this.deleteClicked}>

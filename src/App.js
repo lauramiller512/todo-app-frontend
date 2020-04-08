@@ -7,41 +7,51 @@ import TaskList from './components/TaskList';
 import DoneTask from './components/DoneTask';
 import Footer from './components/Footer';
 import uuidv4 from 'uuid/v4';
+import axios from 'axios';
 
 class App extends React.Component {
-
   state = {
-    tasks: [
-      { id: uuidv4(), description: "Walk the dog", completed: false },
-      { id: uuidv4(), description: "Eat cheese", completed: false },
-      { id: uuidv4(), description: "Learn the kazoo", completed: false }
-    ],
+    tasks: []
+  };
 
-    doneTasks: [
-      { id: uuidv4(), description: "Read a book", completed: true },
-      { id: uuidv4(), description: "Play Mario Kart", completed: true }
-    ]
-  }
-
-
+  // Need to establish an event that calls the tasks from our DB
+  // This is a lifecycle method
+  componentDidMount = () => {
+    // Fetch tasks from API
+    axios.get('https://7whki9pqp2.execute-api.eu-west-2.amazonaws.com/dev/tasks')
+      .then((response) => {
+        // handle success
+        console.log(response);
+      })
+      .catch(function (error) {
+        // handle failure
+        console.error(error);
+      })
+  };
 
   deleteTask = (taskId) => {
     // Tasks will be deleted when this function executes
 
-    // Firstly get the list of tasks from state
-    const tasks = this.state.tasks;
+    axios
+      .delete(
+        `https://7whki9pqp2.execute-api.eu-west-2.amazonaws.com/dev/tasks/{taskId}`
+      )
+      .then(response => {
+        // Next, identify the task that matches the given task Id and remove it
+        const updatedTasks = task.filter(item => item.taskId !== taskId);
 
-    // Next, identify the task that matches the given task Id and remove it
-    const updatedTasks = tasks.filter(item => item.id !== taskId);
-
-    // Update the state with the new collection of tasks (IE. Without the one we deleted)
-    this.setState({
-      tasks: updatedTasks
-    });
-  }
+        // Update the state with the new collection of tasks (IE. Without the one we deleted)
+        this.setState({
+          tasks: updatedTasks
+        });
+      })
+      .catch(error => {
+        // handle error
+        console.error(error);
+      });
+  };
 
   completeTask = (taskId) => {
-   
     // Firstly find the task that needs to be updated
     const tasksBeingUpdated = this.state.tasks; // Array of tasks
     for (let i = 0; i < tasksBeingUpdated.length; i++) {
@@ -58,48 +68,61 @@ class App extends React.Component {
     this.setState({
       tasks: tasksBeingUpdated
     });
-  }
+  };
 
-    addTask = (taskDescription) => {
+  addTask = (taskDescription) => {
+    const taskToAdd = {
+    description: taskDescription,
+    completed: 0,
+    userId: '1'
+    }
 
-      //Defining the task that we're adding
-      const taskToAdd = { id: uuidv4(), description: taskDescription, completed: false };
+  axios
+    .post(
+      "https://x1v2wqvgf0.execute-api.eu-west-2.amazonaws.com/dev/tasks",
+      taskToAdd
+    )
+    .then(response => {
+      taskToAdd.taskId = response.data.task.taskId;
 
-      console.log("Adding a task");
-      console.log(taskToAdd);
-
-      // Pulling the current array list of tasks from state
+      // Get the current list of tasks from state
       const currentTasks = this.state.tasks;
-
-      // Pushing the added task into the array
+      // add the 'taskToAdd' to the array of tasks in state
       currentTasks.push(taskToAdd);
-      // Updates the state (up above)
+
+      // update the state
       this.setState({
         tasks: currentTasks
       });
-    }
+    })
+    .catch(error => {
+      // handle error
+      console.error(error);
+    });
+
+  };
 
 
-    render() {
-      return (
-        <div className="container-fluid flex-fill">
-          <div className="row">
-            <div className="col-12">
-              <Header />
-              <AddTask addTaskFunc={this.addTask} />
-              <TaskCount taskCount={this.state.tasks.length} />
-              <TaskList
-                taskCollection={this.state.tasks}
-                deleteTaskFunc={this.deleteTask}
-                completedTaskFunc={this.completeTask}
-              />
-              <DoneTask />
-              <Footer />
-            </div>
+  render() {
+    return (
+      <div className="container-fluid flex-fill">
+        <div className="row">
+          <div className="col-12">
+            <Header />
+            <AddTask addTaskFunc={this.addTask} />
+            <TaskCount taskCount={this.state.tasks.length} />
+            <TaskList
+              taskCollection={this.state.tasks}
+              deleteTaskFunc={this.deleteTask}
+              completedTaskFunc={this.completeTask}
+            />
+            <DoneTask />
+            <Footer />
           </div>
         </div>
-      );
-    }
+      </div>
+    );
   }
+}
 
-  export default App;
+export default App;
