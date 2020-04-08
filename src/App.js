@@ -38,7 +38,7 @@ class App extends React.Component {
       )
       .then(response => {
         // Next, identify the task that matches the given task Id and remove it
-        const updatedTasks = task.filter(item => item.taskId !== taskId);
+        const updatedTasks = this.state.tasks.filter(item => item.taskId !== taskId);
 
         // Update the state with the new collection of tasks (IE. Without the one we deleted)
         this.setState({
