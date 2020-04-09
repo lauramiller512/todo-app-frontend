@@ -19,7 +19,6 @@ class App extends React.Component {
     // Fetch tasks from API
     axios.get('https://7whki9pqp2.execute-api.eu-west-2.amazonaws.com/dev/tasks')
       .then((response) => {
-        // handle success
         this.setState({
           tasks: response.data.tasks
         })
@@ -31,16 +30,14 @@ class App extends React.Component {
       })
   };
 
-  deleteTask = (id) => {
-    // Tasks will be deleted when this function executes
-
+  deleteTask = (taskId) => {
     axios
       .delete(
-        `https://7whki9pqp2.execute-api.eu-west-2.amazonaws.com/dev/tasks/${id}`
+        `https://7whki9pqp2.execute-api.eu-west-2.amazonaws.com/dev/tasks/${taskId}`
       )
       .then(response => {
         // Next, identify the task that matches the given task Id and remove it
-        const updatedTasks = this.state.tasks.filter(item => item.id !== id);
+        const updatedTasks = this.state.tasks.filter(item => item.taskId !== taskId);
 
         // Update the state with the new collection of tasks (ie. without the one we deleted)
         this.setState({
@@ -53,23 +50,23 @@ class App extends React.Component {
       });
   };
 
-  completeTask = id => {
+  completeTask = taskId => {
     // Firstly get the list of tasks from state
     const currentTasks = this.state.tasks;
     // Next, identify the task that matches the given task id
 
     axios
       .put(
-        `https://l9usbtfbs5.execute-api.eu-west-2.amazonaws.com/dev/tasks/${id}`
+        `https://l9usbtfbs5.execute-api.eu-west-2.amazonaws.com/dev/tasks/${taskId}`
       )
       .then(response => {
         // handle success
         for (let i = 0; i < currentTasks.length; i++) {
           const task = currentTasks[i];
           // change the completed status of the matched task
-          if (task.id === id) {
+          if (task.taskId === taskId) {
             // add a toggle to change status
-            task.completed = task.completed ? false : true;
+            task.completed = task.status ? false : true;
             // task.completed = true if false, false if true;
             // break;
           }
@@ -96,7 +93,7 @@ class App extends React.Component {
       taskToAdd
     )
     .then(response => {
-      taskToAdd.taskId = response.data.task.id;
+      taskToAdd.id = response.data.task.taskId;
 
       // Get the current list of tasks from state
       const currentTasks = this.state.tasks;
