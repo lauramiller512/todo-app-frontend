@@ -53,23 +53,36 @@ class App extends React.Component {
       });
   };
 
-  completeTask = (taskId) => {
-    // Firstly find the task that needs to be updated
-    const tasksBeingUpdated = this.state.tasks; // Array of tasks
-    for (let i = 0; i < tasksBeingUpdated.length; i++) {
-      const task = tasksBeingUpdated[i];
+  completeTask = id => {
+    // Firstly get the list of tasks from state
+    const currentTasks = this.state.tasks;
+    // Next, identify the task that matches the given task id
 
-      if (task.id === taskId) {
-        // We need to update a property on the identified task
-        task.completed = true;
-        break;
-      }
-    }
-
-    // Update state to reflect the changes made to the task
-    this.setState({
-      tasks: tasksBeingUpdated
-    });
+    axios
+      .put(
+        `https://l9usbtfbs5.execute-api.eu-west-2.amazonaws.com/dev/tasks/${id}`
+      )
+      .then(response => {
+        // handle success
+        for (let i = 0; i < currentTasks.length; i++) {
+          const task = currentTasks[i];
+          // change the completed status of the matched task
+          if (task.id === id) {
+            // add a toggle to change status
+            task.completed = task.completed ? false : true;
+            // task.completed = true if false, false if true;
+            // break;
+          }
+          // Update the state with the new completed status
+        }
+        this.setState({
+          tasks: currentTasks
+        });
+      })
+      .catch(error => {
+        // handle error
+        console.error(error);
+      });
   };
 
   addTask = taskDescription => {

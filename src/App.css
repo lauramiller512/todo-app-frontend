@@ -57,10 +57,6 @@
   font-size: 35px;
 }
 
-.completedTask {
-  text-decoration: line-through;
-}
-
 .tasksCompleted {
   font-family: 'Amatic SC', sans-serif;
   font-size: 35px;

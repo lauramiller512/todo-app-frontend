@@ -17,7 +17,7 @@ class Task extends React.Component {
 
         if (this.props.item.status) {
             description = (
-                <div className="col-12 col-md-8 completedTask">
+                <div className="col-12 col-md-8 taskToDo">
                     {this.props.item.taskDescription}
                 </div>
             );
