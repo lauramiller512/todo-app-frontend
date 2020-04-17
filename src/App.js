@@ -66,9 +66,8 @@ class App extends React.Component {
           // change the completed status of the matched task
           if (task.taskId === taskId) {
             // add a toggle to change status
-            task.completed = task.status ? false : true;
-            // task.completed = true if false, false if true;
-            // break;
+            task.completed = !task.status;
+            break;
           }
           // Update the state with the new completed status
         }
