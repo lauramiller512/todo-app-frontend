@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.ac192936.chunk.css",
-    "main.js": "/react-gh-pages/static/js/main.0b265cb5.chunk.js",
-    "main.js.map": "/react-gh-pages/static/js/main.0b265cb5.chunk.js.map",
-    "runtime-main.js": "/react-gh-pages/static/js/runtime-main.59cf04e2.js",
-    "runtime-main.js.map": "/react-gh-pages/static/js/runtime-main.59cf04e2.js.map",
-    "static/js/2.526a3fc8.chunk.js": "/react-gh-pages/static/js/2.526a3fc8.chunk.js",
-    "static/js/2.526a3fc8.chunk.js.map": "/react-gh-pages/static/js/2.526a3fc8.chunk.js.map",
-    "index.html": "/react-gh-pages/index.html",
-    "precache-manifest.418678ba1c652813649bfde21d68930a.js": "/react-gh-pages/precache-manifest.418678ba1c652813649bfde21d68930a.js",
-    "service-worker.js": "/react-gh-pages/service-worker.js",
-    "static/css/main.ac192936.chunk.css.map": "/react-gh-pages/static/css/main.ac192936.chunk.css.map",
-    "static/js/2.526a3fc8.chunk.js.LICENSE": "/react-gh-pages/static/js/2.526a3fc8.chunk.js.LICENSE",
-    "static/media/App.css": "/react-gh-pages/static/media/blueback.c1be93bb.jpg"
+    "main.css": "/todo-app-frontend/static/css/main.c09203ed.chunk.css",
+    "main.js": "/todo-app-frontend/static/js/main.1606e5d7.chunk.js",
+    "main.js.map": "/todo-app-frontend/static/js/main.1606e5d7.chunk.js.map",
+    "runtime-main.js": "/todo-app-frontend/static/js/runtime-main.e0470355.js",
+    "runtime-main.js.map": "/todo-app-frontend/static/js/runtime-main.e0470355.js.map",
+    "static/js/2.526a3fc8.chunk.js": "/todo-app-frontend/static/js/2.526a3fc8.chunk.js",
+    "static/js/2.526a3fc8.chunk.js.map": "/todo-app-frontend/static/js/2.526a3fc8.chunk.js.map",
+    "index.html": "/todo-app-frontend/index.html",
+    "precache-manifest.928a2898212d4d248a0ebe74d0d33725.js": "/todo-app-frontend/precache-manifest.928a2898212d4d248a0ebe74d0d33725.js",
+    "service-worker.js": "/todo-app-frontend/service-worker.js",
+    "static/css/main.c09203ed.chunk.css.map": "/todo-app-frontend/static/css/main.c09203ed.chunk.css.map",
+    "static/js/2.526a3fc8.chunk.js.LICENSE": "/todo-app-frontend/static/js/2.526a3fc8.chunk.js.LICENSE",
+    "static/media/App.css": "/todo-app-frontend/static/media/blueback.c1be93bb.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.59cf04e2.js",
+    "static/js/runtime-main.e0470355.js",
     "static/js/2.526a3fc8.chunk.js",
-    "static/css/main.ac192936.chunk.css",
-    "static/js/main.0b265cb5.chunk.js"
+    "static/css/main.c09203ed.chunk.css",
+    "static/js/main.1606e5d7.chunk.js"
   ]
 }
